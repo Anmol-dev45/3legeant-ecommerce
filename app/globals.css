@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply px-[26px] py-3 rounded-lg font-bold text-lg;
+  }
+  .btn-default {
+    @apply bg-neutral-7 text-white;
+  }
+  .btn-outline {
+    @apply bg-transparent text-neutral-7 border-2 border-neutral-7;
+  }
+
+  .container-c {
+    @apply max-w-7xl min-w-[300px] mx-auto px-4;
+  }
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center;
+  }
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+}
