@@ -1,17 +1,29 @@
 import { NAV_ITEMS } from "@/constants";
 import NavItem from "./NavItem";
+import MobileMenu from "./MobileMenu";
+import Logo from "./Logo";
+import Search from "./Search";
+import UserProfile from "./UserProfile";
 const Navbar = () => {
   return (
     <header className="container-c py-5 flex-between">
-      <h1 className="text-2xl font-medium text-neutral-7 leading-6">
-        3legant<span className="text-neutral-4">.</span>
-      </h1>
-      <nav className="flex md:flex-row gap-10 text-sm font-medium capitalize leading-6">
+      <MobileMenu />
+      <div className="max-md:hidden">
+        <Logo />
+      </div>
+      <nav className="flex gap-10 text-sm font-medium capitalize leading-6 max-md:hidden">
         {NAV_ITEMS.map((item) => (
           <NavItem item={item} key={item.name} />
         ))}
       </nav>
-      <div className="w-64 h-10 border-black border-2"></div>
+      <div className="flex-center gap-4">
+        <div className="max-md:hidden">
+          <Search />
+        </div>
+        <div className="max-md:hidden">
+          {/* <UserProfile name="Anmol Basnet" image={null} /> */}
+        </div>
+      </div>
     </header>
   );
 };

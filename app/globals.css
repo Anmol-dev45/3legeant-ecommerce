@@ -4,7 +4,7 @@
 
 @layer components {
   .btn {
-    @apply px-[26px] py-3 rounded-lg font-bold text-lg;
+    @apply px-[26px] py-3 rounded-lg text-base leading-7;
   }
   .btn-default {
     @apply bg-neutral-7 text-white;
